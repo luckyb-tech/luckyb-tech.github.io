@@ -1,20 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>School Event Form | Lucky Biionto</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { font-family: Arial, sans-serif; text-align:center; padding:50px; background:#f4f6f9; }
-        h1 { color:#111827; }
-        p { color:#333; font-size:18px; }
-        a { display:inline-block; margin-top:20px; padding:10px 15px; background:#2563eb; color:#fff; text-decoration:none; border-radius:5px; }
-        a:hover { background:#1d4ed8; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Event Registration | Lucky Biionto</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2563eb;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+</style>
 </head>
 <body>
-    <h1>School Event Form</h1>
-    <p>This is a placeholder page for my school event form project. Full project coming soon!</p>
-    <a href="https://luckyb-tech.github.io/" target="_blank">Back to Portfolio</a>
-    
+
+<header>
+    <h1>School Event Registration</h1>
+</header>
+
+<div class="container">
+    <h2>Register for the Event</h2>
+    <form action="https://formspree.io/f/xgoldqrn" method="POST">
+        <input type="text" name="student_name" placeholder="Student Name" required>
+        <input type="text" name="student_id" placeholder="Student ID / Admission Number" required>
+        <input type="email" name="student_email" placeholder="Student Email" required>
+        <input type="tel" name="student_phone" placeholder="Student Phone Number" required>
+        <input type="text" name="guardian_name" placeholder="Guardian Name" required>
+        <input type="tel" name="guardian_phone" placeholder="Guardian Phone Number" required>
+        <select name="event_type" required>
+            <option value="">Select Event Type</option>
+            <option value="sports">Sports</option>
+            <option value="cultural">Cultural</option>
+            <option value="academic">Academic</option>
+        </select>
+        <textarea name="additional_info" placeholder="Additional Information (optional)" rows="4"></textarea>
+        <button type="submit">Submit Registration</button>
+    </form>
+</div>
+
 </body>
 </html>
