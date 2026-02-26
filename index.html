@@ -1,97 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lucky Biionto | Web Designer & Front-End Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Tech Solutions</title>
 
-    <style>
-        body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f6f9; }
-        header { background:#111827; color:#fff; padding:50px 20px; text-align:center; }
-        section { padding:40px 20px; max-width:900px; margin:auto; }
-        h1,h2 { text-align:center; }
-        .card { background:#fff; padding:25px; margin-top:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.08); opacity:0; transform:translateY(20px); transition: all 0.6s ease; }
-        .card.visible { opacity:1; transform:translateY(0); }
-        ul { list-style:none; padding-left:0; }
-        li { margin-bottom:10px; }
-        .btn {
-            display:inline-block;
-            padding:12px 22px;
-            margin-top:10px;
-            background: linear-gradient(45deg, #2563eb, #1d4ed8);
-            color:#fff;
-            text-decoration:none;
-            border-radius:8px;
-            font-weight:bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
-        }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.6); }
-        .contact { max-width:600px; margin:40px auto; padding:20px; background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; }
-        footer { background:#111827; color:#fff; text-align:center; padding:15px; margin-top:40px; }
-    </style>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #111827;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: white;
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #111827;
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 70px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Services */
+.services {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Testimonials */
+.testimonial {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Contact */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Footer */
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Lucky Biionto</h1>
-    <p>Professional Web Designer | HTML & Front-End Developer</p>
+    <h1>BusinessTech</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>Hello! I am Lucky Biionto, a passionate web designer who creates clean and user-friendly websites. I specialize in HTML, CSS, and front-end development, focusing on clarity, usability, and modern design.</p>
+<section class="hero">
+    <h2>We Build Modern Digital Solutions</h2>
+    <p>Professional websites, business systems and digital tools that help companies grow and succeed online.</p>
+    <a href="#services" class="btn">Our Services</a>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-card">
+            <h3>Website Development</h3>
+            <p>Modern, responsive and fast websites for businesses and startups.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>UI/UX Design</h3>
+            <p>Clean and user-friendly designs focused on customer experience.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Business Consulting</h3>
+            <p>Helping businesses move from offline to strong digital presence.</p>
+        </div>
+    </div>
 </section>
 
 <section>
-    <h2>My Projects</h2>
+    <h2>Testimonials</h2>
 
-    <div class="card">
-        <h3>Job Application Form</h3>
-        <p>A fully structured HTML job application form with personal details, education, work experience, and skills.</p>
-        <a href="lucky-tech-job-application.html" target="_blank" class="btn">View Project</a>
+    <div class="testimonial">
+        <p>"BusinessTech transformed our online presence. Highly recommended!"</p>
+        <strong>- Client A</strong>
     </div>
 
-    <div class="card">
-        <h3>Business Landing Page</h3>
-        <p>A responsive business landing page with sections for services, testimonials, and contact. Perfect for small businesses or startups.</p>
-        <a href="business-landing-page.html" target="_blank" class="btn">View Project</a>
+    <div class="testimonial">
+        <p>"Professional, reliable and fast delivery."</p>
+        <strong>- Client B</strong>
     </div>
-
-    <div class="card">
-        <h3>School Event Form</h3>
-        <p>An HTML form designed for school events registration. Includes validation fields, student info, and guardian contact details.</p>
-        <a href="school-event-form.html" target="_blank" class="btn">View Project</a>
-    </div>
-
 </section>
 
-<section>
-    <h2>Contact Me</h2>
-    <div class="contact">
-        <p>Email: <a href="mailto:luckybiionto@yahoo.com">luckybiionto@yahoo.com</a></p>
-        <p>Phone/WhatsApp: <a href="tel:+254762617344">+254762617344</a></p>
-        <p>GitHub: <a href="https://github.com/luckyb-tech" target="_blank">github.com/luckyb-tech</a></p>
-        <p>Location: Nairobi, Kenya</p>
-    </div>
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 </section>
 
 <footer>
-    © 2026 Lucky Biionto | All Rights Reserved
+    © 2026 BusinessTech | All Rights Reserved
 </footer>
-
-<script>
-    // Fade-in animation on scroll
-    const cards = document.querySelectorAll('.card');
-    window.addEventListener('scroll', () => {
-        const triggerBottom = window.innerHeight / 5 * 4;
-        cards.forEach(card => {
-            const cardTop = card.getBoundingClientRect().top;
-            if(cardTop < triggerBottom) { card.classList.add('visible'); }
-        });
-    });
-</script>
 
 </body>
 </html>
-
