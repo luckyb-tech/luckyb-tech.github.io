@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Tech Solutions</title>
+<title>Lucky Biionto | Web Designer & Front-End Developer</title>
 
 <style>
+/* ===== GENERAL ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -13,7 +14,7 @@ body {
     color: #333;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 header {
     background: #111827;
     color: white;
@@ -23,42 +24,26 @@ header {
     align-items: center;
 }
 
-header h1 {
-    margin: 0;
-}
+header h1 { margin: 0; font-size: 24px; }
 
-/* Navigation */
 nav a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
 }
+nav a:hover { color: #2563eb; }
 
-nav a:hover {
-    color: #2563eb;
-}
-
-/* Hero Section */
+/* ===== HERO ===== */
 .hero {
     background: linear-gradient(to right, #2563eb, #1d4ed8);
     color: white;
     text-align: center;
     padding: 100px 20px;
 }
-
-.hero h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: auto;
-}
-
-.btn {
+.hero h2 { font-size: 40px; margin-bottom: 20px; }
+.hero p { font-size: 18px; max-width: 600px; margin: auto; }
+.hero .btn {
     display: inline-block;
     margin-top: 25px;
     padding: 12px 25px;
@@ -69,56 +54,45 @@ nav a:hover {
     border-radius: 8px;
     transition: 0.3s ease;
 }
-
-.btn:hover {
+.hero .btn:hover {
     background: #111827;
     color: white;
 }
 
-/* Sections */
-section {
-    padding: 70px 20px;
-    max-width: 1100px;
-    margin: auto;
-}
+/* ===== SECTIONS ===== */
+section { padding: 70px 20px; max-width: 1100px; margin: auto; }
+section h2 { text-align: center; margin-bottom: 40px; }
 
-section h2 {
-    text-align: center;
-    margin-bottom: 40px;
+/* ===== SKILLS ===== */
+.skills .badge {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
 }
+.html { background:#f06529; }
+.css { background:#2965f1; }
+.responsive { background:#10b981; }
+.forms { background:#f59e0b; }
+.ux { background:#6b21a8; }
 
-/* Services */
-.services {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+/* ===== PROJECTS ===== */
+.card {
+    background:#fff;
+    padding:25px;
+    margin-top:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    opacity:0;
+    transform:translateY(20px);
+    transition: all 0.6s ease;
 }
+.card.visible { opacity:1; transform:translateY(0); }
+.project-img { width:100%; border-radius:8px; margin-top:10px; }
 
-.service-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-6px);
-}
-
-/* Testimonials */
-.testimonial {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-/* Contact */
+/* ===== CONTACT ===== */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -126,14 +100,12 @@ section h2 {
     max-width: 500px;
     margin: auto;
 }
-
 input, textarea {
     padding: 12px;
     border-radius: 6px;
     border: 1px solid #ccc;
     width: 100%;
 }
-
 button {
     padding: 12px;
     background: #2563eb;
@@ -143,12 +115,9 @@ button {
     font-weight: bold;
     cursor: pointer;
 }
+button:hover { background: #1d4ed8; }
 
-button:hover {
-    background: #1d4ed8;
-}
-
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
     background: #111827;
     color: white;
@@ -157,17 +126,9 @@ footer {
     margin-top: 50px;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media(max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .services {
-        flex-direction: column;
-        align-items: center;
-    }
+    header { flex-direction: column; text-align: center; }
 }
 </style>
 </head>
@@ -175,68 +136,103 @@ footer {
 <body>
 
 <header>
-    <h1>BusinessTech</h1>
+    <h1>Lucky Biionto</h1>
     <nav>
         <a href="#">Home</a>
-        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <section class="hero">
-    <h2>We Build Modern Digital Solutions</h2>
-    <p>Professional websites, business systems and digital tools that help companies grow and succeed online.</p>
-    <a href="#services" class="btn">Our Services</a>
+    <h2>Hello! I'm Lucky Biionto</h2>
+    <p>Professional Web Designer & Front-End Developer creating modern, responsive, and user-friendly websites.</p>
+    <a href="#projects" class="btn">View Projects</a>
 </section>
 
-<section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="service-card">
-            <h3>Website Development</h3>
-            <p>Modern, responsive and fast websites for businesses and startups.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>UI/UX Design</h3>
-            <p>Clean and user-friendly designs focused on customer experience.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Business Consulting</h3>
-            <p>Helping businesses move from offline to strong digital presence.</p>
-        </div>
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="card skills">
+        <span class="badge html">HTML5</span>
+        <span class="badge css">CSS3</span>
+        <span class="badge responsive">Responsive Design</span>
+        <span class="badge forms">Form Design</span>
+        <span class="badge ux">UI/UX Basics</span>
     </div>
 </section>
 
-<section>
-    <h2>Testimonials</h2>
+<section id="projects">
+    <h2>My Projects</h2>
 
-    <div class="testimonial">
-        <p>"BusinessTech transformed our online presence. Highly recommended!"</p>
-        <strong>- Client A</strong>
+    <div class="card">
+        <h3>Job Application Form</h3>
+        <img src="images/job-form.png" class="project-img" alt="Job Application Form">
+        <p>A structured HTML job application form with personal details, education, work experience, and skills.</p>
+        <a href="luckyb-tech-job-application/lucky-tech-job-application.html" target="_blank" class="btn">View Project</a>
     </div>
 
-    <div class="testimonial">
-        <p>"Professional, reliable and fast delivery."</p>
-        <strong>- Client B</strong>
+    <div class="card">
+        <h3>Business Landing Page</h3>
+        <img src="images/business-page.png" class="project-img" alt="Business Landing Page">
+        <p>A responsive business landing page with services, testimonials, and contact sections.</p>
+        <a href="business-landing-page.html" target="_blank" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+        <h3>School Event Form</h3>
+        <img src="images/school-form.png" class="project-img" alt="School Event Form">
+        <p>An HTML form designed for school events registration including student info and guardian contacts.</p>
+        <a href="school-event-form.html" target="_blank" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+        <h3>To-Do App</h3>
+        <img src="images/todo.png" class="project-img" alt="To-Do App">
+        <p>A simple and functional task manager with add, delete, and mark complete features built using HTML, CSS, and JavaScript.</p>
+        <a href="todo-app.html" target="_blank" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+        <h3>Cafe Menu</h3>
+        <img src="images/cafe-menu.png" class="project-img" alt="Cafe Menu">
+        <p>A responsive cafe menu page with appetizers, main courses, desserts, and beverages beautifully laid out using HTML & CSS.</p>
+        <a href="cafe-menu.html" target="_blank" class="btn">View Project</a>
     </div>
 </section>
 
 <section id="contact">
-    <h2>Contact Us</h2>
+    <h2>Contact Me</h2>
 
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message" required></textarea>
+    <form action="https://formspree.io/f/xgoldqrn" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
     </form>
+
+    <p style="text-align:center; margin-top:20px;">
+        <strong>Email:</strong> <a href="mailto:luckybiionto@yahoo.com">luckybiionto@yahoo.com</a> | 
+        <strong>Contact:</strong> +254 762 617 344 | 
+        <strong>WhatsApp:</strong> +254 762 617 344
+    </p>
 </section>
 
 <footer>
-    © 2026 BusinessTech | All Rights Reserved
+    © 2026 Lucky Biionto | All Rights Reserved
 </footer>
+
+<script>
+// Fade-in animation on scroll
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll', () => {
+    const triggerBottom = window.innerHeight / 5 * 4;
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom) card.classList.add('visible');
+    });
+});
+</script>
 
 </body>
 </html>
