@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe Menu | Lucky Biionto</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-category {
+    margin-bottom: 50px;
+}
+
+.menu-category h3 {
+    color: #2563eb;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2563eb;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item span.price {
+    font-weight: bold;
+    color: #1d4ed8;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .menu-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Lucky's Cafe Menu</h1>
+</header>
+
+<section>
+    <h2>Our Menu</h2>
+
+    <div class="menu-category">
+        <h3>Appetizers</h3>
+        <div class="menu-item"><span>Garlic Bread</span><span class="price">$3.50</span></div>
+        <div class="menu-item"><span>Bruschetta</span><span class="price">$4.00</span></div>
+        <div class="menu-item"><span>Stuffed Mushrooms</span><span class="price">$4.50</span></div>
+    </div>
+
+    <div class="menu-category">
+        <h3>Main Courses</h3>
+        <div class="menu-item"><span>Grilled Chicken</span><span class="price">$10.00</span></div>
+        <div class="menu-item"><span>Vegetarian Pasta</span><span class="price">$9.50</span></div>
+        <div class="menu-item"><span>Beef Burger</span><span class="price">$11.00</span></div>
+    </div>
+
+    <div class="menu-category">
+        <h3>Desserts</h3>
+        <div class="menu-item"><span>Chocolate Cake</span><span class="price">$5.00</span></div>
+        <div class="menu-item"><span>Cheesecake</span><span class="price">$5.50</span></div>
+        <div class="menu-item"><span>Fruit Tart</span><span class="price">$4.50</span></div>
+    </div>
+
+    <div class="menu-category">
+        <h3>Beverages</h3>
+        <div class="menu-item"><span>Coffee</span><span class="price">$2.50</span></div>
+        <div class="menu-item"><span>Tea</span><span class="price">$2.00</span></div>
+        <div class="menu-item"><span>Smoothie</span><span class="price">$3.50</span></div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Lucky Biionto | All Rights Reserved
+</footer>
+
+</body>
+</html>
